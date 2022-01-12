@@ -1,0 +1,24 @@
+.validation {
+  &__text {
+    font-style: italic;
+  }
+
+  &__answer {
+    &.valid {
+        background-color: lightgreen;
+    }
+
+    &.invalid {
+      min-width: 2rem;
+      background-color: lightcoral;
+    }
+  }
+
+  &__number {
+    font-weight: 500;
+  }
+
+  &__button {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    margin-top: 4rem;
+
+    &__button {
+        cursor: pointer;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 10rem;
+        background-color: white;
+
+        &.active {
+            background-color: lightseagreen;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: lightgray;
+        }
+    }
+}

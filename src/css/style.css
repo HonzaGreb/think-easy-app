@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 2rem;
+  background-color: lightblue;
+  border-radius: 2rem;
+  min-height: 30rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.form__label {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.form__input {
+  padding: 0.75rem 2rem;
+  font-family: inherit;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.form__input.invalid {
+  border-bottom: 3px solid red;
+}
+.form__button {
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+}
+.form__warning {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  margin-top: 4rem;
+}
+.nav__button {
+  cursor: pointer;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 10rem;
+  background-color: white;
+}
+.nav__button.active {
+  background-color: lightseagreen;
+}
+.nav__button:disabled {
+  cursor: not-allowed;
+  background-color: lightgray;
+}
+
+.validation__text {
+  font-style: italic;
+}
+.validation__answer.valid {
+  background-color: lightgreen;
+}
+.validation__answer.invalid {
+  min-width: 2rem;
+  background-color: lightcoral;
+}
+.validation__number {
+  font-weight: 500;
+}
+.validation__button {
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

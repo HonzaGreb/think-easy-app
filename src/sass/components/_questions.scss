@@ -10,6 +10,13 @@
   border-radius: 4rem 0;
   animation: slideInLeftLarge 500ms ease;
 
+  &:hover {
+    &::after {
+      top: -2rem;
+      right: 2rem;
+    }
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -21,6 +28,7 @@
     right: -2rem;
     border: 2px solid $color-white;
     z-index: -1;
+    transition: $transition;
   }
 }
 

@@ -11,8 +11,6 @@ const NavButton: React.FC<{ index: number; currentIndex: number }> = (
   const changeCurrentIndexHandler = () => {
     dispatch(changePosition(index));
   };
-  console.log('index ', index)
-  console.log('currentIndex ', currentIndex)
 
   const buttonClasses = index === currentIndex ? 'btn--nav active' : 'btn--nav';
 

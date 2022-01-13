@@ -1,0 +1,26 @@
+@use '../abstracts/animations' as *;
+
+.heading {
+  &--2 {
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 800;
+  }
+}
+
+.u-mb-s {
+  margin-bottom: 1rem;
+}
+
+.u-mb-m {
+  margin-bottom: 2rem;
+}
+
+.u-mb-l {
+  margin-bottom: 4rem;
+}
+
+.u-mb-auto {
+    margin-bottom: auto;
+}

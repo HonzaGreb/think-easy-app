@@ -8,6 +8,7 @@
   padding: 4rem;
   background-color: $color-white;
   border-radius: 4rem 0;
+  animation: slideInLeftLarge 500ms ease;
 
   &::after {
     content: '';
@@ -28,6 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: slideInLeftSmall 500ms ease;
 }
 
 .form {
@@ -39,14 +41,12 @@
     font-size: 1.8rem;
     font-style: italic;
     font-weight: 800;
-    margin-bottom: 2rem;
   }
 
   &__input {
     padding: 1rem 2rem;
     font-family: inherit;
     border-radius: 0.5rem;
-    margin-bottom: 2rem;
     border: 1px solid $color-grey-3;
     outline: none;
     transition: $transition;

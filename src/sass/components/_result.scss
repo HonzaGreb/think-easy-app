@@ -1,19 +1,44 @@
 .result {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
+  animation: slideInLeftSmall 500ms ease;
 
   &__heading {
     text-align: center;
     font-size: 1.8rem;
     font-style: italic;
     font-weight: 800;
-    margin-bottom: 3rem;
   }
 
   &__text {
-    margin-bottom: auto;
+    position: relative;
+    font-size: 1.8rem;
     text-align: center;
+    quotes: '“' '”';
+
+    &::before,
+    &::after {
+      display: inline-table;
+      position: absolute;
+      font-size: 8rem;
+      font-weight: 500;
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    &::before {
+      content: open-quote;
+      top: -3.5rem;
+      right: -1.5rem;
+    }
+
+    &::after {
+      content: close-quote;
+      left: -1.5rem;
+    }
   }
 }

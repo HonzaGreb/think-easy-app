@@ -47,11 +47,11 @@ const Form: React.FC<{
 
   return (
     <form onSubmit={formSubmitHandler} className="form">
-      <label className="form__label" htmlFor={`id_${index}`}>
+      <label className="heading--2 u-mb-l" htmlFor={`id_${index}`}>
         {question}
       </label>
       <input
-        className="form__input"
+        className="form__input u-mb-m"
         type="text"
         id={`id_${index}`}
         value={inputValue}

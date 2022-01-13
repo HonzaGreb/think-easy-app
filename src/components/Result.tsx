@@ -23,10 +23,12 @@ const Result: React.FC<{ questions: Question[] }> = (props) => {
   };
 
   return (
-    <div className='result'>
-      <h2 className='result__heading'>Result:</h2>
-      <p className='result__text'>{extractedResult}</p>
-      <button className="btn--primary" onClick={resetHandler}>Reset</button>
+    <div className="result">
+      <h2 className="result__heading">Result is:</h2>
+      <span className="result__text">{extractedResult}</span>
+      <button className="btn--primary" onClick={resetHandler}>
+        Reset
+      </button>
     </div>
   );
 };

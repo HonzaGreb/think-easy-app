@@ -2,23 +2,22 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  animation: slideInLeftSmall 500ms ease;
 
   &__text {
     margin-bottom: auto;
-  }
-
-  &__heading {
-    font-size: 1.8rem;
-    font-weight: 800;
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 1rem;
   }
 
   &__index,
   &__answer {
     font-size: 1.4rem;
     text-align: center;
+  }
+
+  &__answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
 
   &__answer {

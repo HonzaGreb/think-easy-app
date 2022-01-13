@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as *;
+
+%btn {
+  display: block;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 50rem;
+  background-color: transparent;
+  border: 2px solid;
+  color: $color-text;
+  border-color: currentColor;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  transition: $transition;
+}
+
+.btn {
+  &--primary {
+    @extend %btn;
+    color: $color-white;
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: darken($color-primary, 4%);
+    }
+  }
+
+  &--secondary {
+    @extend %btn;
+    color: $color-primary;
+    background-color: $color-white;
+
+    &:hover {
+      background-color: lighten($color-primary, 22%);
+    }
+  }
+
+  &--nav {
+    cursor: pointer;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 10rem;
+    border: 1px solid $color-text;
+    transition: $transition;
+
+    &:hover {
+      background-color: $color-grey-2;
+    }
+
+    &.active {
+      background-color: $color-text;
+    }
+
+    &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+  }
+}

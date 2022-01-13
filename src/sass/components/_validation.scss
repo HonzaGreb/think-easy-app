@@ -1,11 +1,37 @@
 .validation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
   &__text {
+    margin-bottom: auto;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
     font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  &__index,
+  &__answer {
+    font-size: 1.4rem;
+    text-align: center;
   }
 
   &__answer {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: auto;
+    }
+
     &.valid {
-        background-color: lightgreen;
+      background-color: lightgreen;
     }
 
     &.invalid {
@@ -14,11 +40,7 @@
     }
   }
 
-  &__number {
+  &__index {
     font-weight: 500;
-  }
-
-  &__button {
-    padding: 1rem;
   }
 }

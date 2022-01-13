@@ -11,12 +11,12 @@ const ValidationAnswer: React.FC<{ answer: Answer }> = (props) => {
     : 'validation__answer valid';
 
   return (
-    <Fragment>
-      <span className="validation__number">Answer {answer.index}: </span>
+    <div>
+      <p className="validation__index">Question {answer.index}: </p>
       <p className={answerClasses}>
-        {emptyAnswer ? 'Invalid answer' : 'Valid answer'}{' '}
+        {emptyAnswer ? 'Unanswered' : 'Answered'}{' '}
       </p>
-    </Fragment>
+    </div>
   );
 };
 

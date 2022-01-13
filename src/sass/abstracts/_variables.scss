@@ -1,2 +1,19 @@
-$color-input-valid: green;
-$color-input-invalid: red;
+$color-primary: #383838;
+$color-secondary: #383838;
+// $color-primary: #faaf66;
+// $color-secondary: #f37b7e;
+$color-white: #fff;
+$color-text: #383838;
+
+$color-grey-1: #ececec;
+$color-grey-2: #cecece;
+$color-grey-3: #adadad;
+$color-grey-4: #a1a1a1;
+$color-grey-5: #949494;
+
+$gradient: linear-gradient(
+  to bottom right,
+  rgba(#faaf66, 0.6),
+  rgba(#f37b7e, 0.6)
+);
+$transition: all 250ms ease;

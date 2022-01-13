@@ -1,7 +1,10 @@
 @forward '../base/base';
 @forward '../base/typography';
 
-@forward '../components/form';
+@forward '../layout/grid';
+
+@forward '../components/questions';
 @forward '../components/menu';
-@forward '../components/nav';
 @forward '../components/validation';
+@forward '../components/result';
+@forward '../components/btn';

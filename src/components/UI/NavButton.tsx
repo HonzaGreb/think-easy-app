@@ -9,17 +9,16 @@ const NavButton: React.FC<{ index: number; currentIndex: number }> = (
   const dispatch = useDispatch();
 
   const changeCurrentIndexHandler = () => {
-    console.log('clicked', index);
     dispatch(changePosition(index));
   };
 
-  const buttonClasses =
-    index === currentIndex ? 'nav__button active' : 'nav__button';
+  const buttonClasses = index === currentIndex ? 'btn--nav active' : 'btn--nav';
 
   return (
-    <button className={buttonClasses} onClick={changeCurrentIndexHandler}>
-      {index}
-    </button>
+    <button
+      className={buttonClasses}
+      onClick={changeCurrentIndexHandler}
+    ></button>
   );
 };
 

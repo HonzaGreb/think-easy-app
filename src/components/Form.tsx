@@ -56,8 +56,8 @@ const Form: React.FC<{
         onChange={inputChangeHandler}
         placeholder={answer}
       />
-      <button className="form__button" type="submit">
-        {lastPosition ? 'Done' : 'Next'}
+      <button className="btn--primary" type="submit">
+        {lastPosition ? 'Check' : 'Next'}
       </button>
     </form>
   );

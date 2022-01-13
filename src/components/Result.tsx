@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import { resetAnswers } from '../features/answersSlice';
 import { showQuestions, changePosition } from '../features/positionSlice';
@@ -24,11 +23,11 @@ const Result: React.FC<{ answers: Answer[] }> = (props) => {
   };
 
   return (
-    <Fragment>
-      <p>Result:</p>
-      <p>{extractedResult}</p>
-      <button onClick={resetHandler}>Reset</button>
-    </Fragment>
+    <div className='result'>
+      <h2 className='result__heading'>Result:</h2>
+      <p className='result__text'>{extractedResult}</p>
+      <button className="btn--primary" onClick={resetHandler}>Reset</button>
+    </div>
   );
 };
 

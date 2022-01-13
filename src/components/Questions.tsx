@@ -9,7 +9,7 @@ const Questions: React.FC<{ state: RootState }> = (props) => {
 
   return (
     <div className="questions">
-      <Form question={questions[currentIndex]} total={total} />
+      <Form question={questions[currentIndex]} index={currentIndex} total={total} />
       <Navigation currentIndex={currentIndex} questions={questions} />
     </div>
   );

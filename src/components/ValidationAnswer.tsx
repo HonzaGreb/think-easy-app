@@ -1,8 +1,8 @@
 import React from 'react';
 import { Question } from '../model/Question';
 
-const ValidationAnswer: React.FC<{ question: Question }> = (props) => {
-  const { question } = props;
+const ValidationAnswer: React.FC<{ question: Question, index: number }> = (props) => {
+  const { question, index } = props;
 
   const emptyAnswer = !question.answer;
 
@@ -12,7 +12,7 @@ const ValidationAnswer: React.FC<{ question: Question }> = (props) => {
 
   return (
     <div>
-      <p className="validation__index">Question {question.index + 1}: </p>
+      <p className="validation__index">Question {index + 1}: </p>
       <p className={answerClasses}>
         {emptyAnswer ? 'Unanswered' : 'Answered'}{' '}
       </p>

@@ -2,13 +2,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Question } from '../model/Question';
 
 export const DEFAULT_QUESTIONS: Question[] = [
-  { index: 0, question: 'Who?', answer: '' },
-  { index: 1, question: 'What?', answer: '' },
-  { index: 2, question: 'When?', answer: '' },
-  { index: 3, question: 'Where?', answer: '' },
+  { question: 'Who?', answer: '' },
+  { question: 'What?', answer: '' },
+  { question: 'When?', answer: '' },
+  { question: 'Where?', answer: '' },
 ];
 
-type answerAction = PayloadAction<Question>;
+type answerAction = PayloadAction<{index: number; answer: string;}>;
 
 const questionsSlice = createSlice({
   name: 'questions',

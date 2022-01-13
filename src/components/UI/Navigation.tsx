@@ -9,12 +9,12 @@ const Navigation: React.FC<{ currentIndex: number; questions: Question[] }> = (
 
   return (
     <nav className="nav">
-      {questions.map((q) => {
+      {questions.map((q, i) => {
         return (
           <NavButton
-            index={q.index}
+            index={i}
             currentIndex={currentIndex}
-            key={q.index}
+            key={i}
           />
         );
       })}

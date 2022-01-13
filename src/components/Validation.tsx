@@ -43,8 +43,8 @@ const Validation: React.FC<{ questions: Question[] }> = (props) => {
       <div className="validation__text">
         <h3 className="validation__heading">Do you want to continue?</h3>
         <div className="validation__answers">
-          {props.questions.map((question) => {
-            return <ValidationAnswer question={question} key={question.index} />;
+          {props.questions.map((question, i) => {
+            return <ValidationAnswer question={question} index={i} key={i} />;
           })}
         </div>
       </div>

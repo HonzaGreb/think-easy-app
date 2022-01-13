@@ -6,11 +6,12 @@ import { Question } from '../model/Question';
 
 const Form: React.FC<{
   question: Question;
+  index: number;
   total: number;
 }> = (props) => {
   const [inputValue, setInputValue] = useState<string>('');
-  const { question, index, answer } = props.question;
-  const { total } = props;
+  const { question, answer } = props.question;
+  const { total, index } = props;
 
   const dispatch = useDispatch();
 
@@ -23,7 +24,7 @@ const Form: React.FC<{
     e.preventDefault();
 
     // ↓ Využije předešlou odpověď, není-li vložena nová
-    const answerObject = { index, question, answer: inputValue || answer };
+    const answerObject = { index, answer: inputValue || answer };
 
     dispatch(writeAnswer(answerObject));
     setInputValue('');

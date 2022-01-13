@@ -1,27 +1,27 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Answer } from '../model/Answer';
+import { Question } from '../model/Question';
 
-export const DEFAULT_ANSWERS: Answer[] = [
+export const DEFAULT_QUESTIONS: Question[] = [
   { index: 0, question: 'Who?', answer: '' },
   { index: 1, question: 'What?', answer: '' },
   { index: 2, question: 'When?', answer: '' },
   { index: 3, question: 'Where?', answer: '' },
 ];
 
-type answerAction = PayloadAction<Answer>;
+type answerAction = PayloadAction<Question>;
 
-const answersSlice = createSlice({
-  name: 'answers',
-  initialState: DEFAULT_ANSWERS,
+const questionsSlice = createSlice({
+  name: 'questions',
+  initialState: DEFAULT_QUESTIONS,
   reducers: {
     writeAnswer(state, action: answerAction) {
       const answerIndex = action.payload.index;
       state[answerIndex].answer = action.payload.answer;
     },
-    resetAnswers: () => DEFAULT_ANSWERS,
+    resetAnswers: () => DEFAULT_QUESTIONS,
   },
 });
 
-export const { writeAnswer, resetAnswers } = answersSlice.actions;
+export const { writeAnswer, resetAnswers } = questionsSlice.actions;
 
-export default answersSlice.reducer;
+export default questionsSlice.reducer;

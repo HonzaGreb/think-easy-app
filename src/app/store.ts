@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import positionSlice from '../features/positionSlice';
-import answersSlice from '../features/answersSlice';
+import questionsSlice from '../features/questionsSlice';
 
 const store = configureStore({
-  reducer: { position: positionSlice, answers: answersSlice },
+  reducer: { position: positionSlice, questions: questionsSlice },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

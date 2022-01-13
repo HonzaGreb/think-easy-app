@@ -1,20 +1,20 @@
 import { useDispatch } from 'react-redux';
-import { resetAnswers } from '../features/answersSlice';
+import { resetAnswers } from '../features/questionsSlice';
 import { showQuestions, changePosition } from '../features/positionSlice';
-import { Answer } from '../model/Answer';
+import { Question } from '../model/Question';
 
-const Result: React.FC<{ answers: Answer[] }> = (props) => {
+const Result: React.FC<{ questions: Question[] }> = (props) => {
   const dispatch = useDispatch();
 
   // ↓ Extrakce odpovědí a konverze na string
 
-  const extractAndStringify = (a: Answer[]) => {
+  const extractAndStringify = (a: Question[]) => {
     const extractedArray = a.map((item) => item.answer);
     const string = extractedArray.join(' ');
     return string;
   };
 
-  const extractedResult = extractAndStringify(props.answers);
+  const extractedResult = extractAndStringify(props.questions);
 
   const resetHandler = () => {
     dispatch(resetAnswers());

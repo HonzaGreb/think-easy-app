@@ -1,20 +1,20 @@
 import React from 'react';
 import NavButton from './NavButton';
-import { Answer } from '../../model/Answer';
+import { Question } from '../../model/Question';
 
-const Navigation: React.FC<{ currentIndex: number; answers: Answer[] }> = (
+const Navigation: React.FC<{ currentIndex: number; questions: Question[] }> = (
   props
 ) => {
-  const { currentIndex, answers } = props;
+  const { currentIndex, questions } = props;
 
   return (
     <nav className="nav">
-      {answers.map((answer) => {
+      {questions.map((q) => {
         return (
           <NavButton
-            index={answer.index}
+            index={q.index}
             currentIndex={currentIndex}
-            key={answer.index}
+            key={q.index}
           />
         );
       })}

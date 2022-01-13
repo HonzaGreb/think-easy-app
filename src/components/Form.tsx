@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { writeAnswer } from '../features/answersSlice';
+import { writeAnswer } from '../features/questionsSlice';
 import { incrementPosition, showValidation } from '../features/positionSlice';
-import { Answer } from '../model/Answer';
+import { Question } from '../model/Question';
 
 const Form: React.FC<{
-  answer: Answer;
+  question: Question;
   total: number;
 }> = (props) => {
   const [inputValue, setInputValue] = useState<string>('');
-  const { question, index, answer } = props.answer;
+  const { question, index, answer } = props.question;
   const { total } = props;
 
   const dispatch = useDispatch();
 
   const lastPosition = index === total;
+  console.log(index, total, question)
 
   // ↓ Imperativní navigace a zápis odpovědí
 
@@ -28,10 +29,10 @@ const Form: React.FC<{
     setInputValue('');
     console.log('writing ', answerObject, '...');
 
-    if (!lastPosition) {
-      dispatch(incrementPosition());
-    } else {
+    if (lastPosition) {
       dispatch(showValidation());
+    } else {
+      dispatch(incrementPosition());
     }
   };
 

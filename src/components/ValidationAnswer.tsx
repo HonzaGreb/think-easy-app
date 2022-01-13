@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
-import { Answer } from '../model/Answer';
+import React from 'react';
+import { Question } from '../model/Question';
 
-const ValidationAnswer: React.FC<{ answer: Answer }> = (props) => {
-  const { answer } = props;
+const ValidationAnswer: React.FC<{ question: Question }> = (props) => {
+  const { question } = props;
 
-  const emptyAnswer = !answer.answer;
+  const emptyAnswer = !question.answer;
 
   const answerClasses = emptyAnswer
     ? 'validation__answer invalid'
@@ -12,7 +12,7 @@ const ValidationAnswer: React.FC<{ answer: Answer }> = (props) => {
 
   return (
     <div>
-      <p className="validation__index">Question {answer.index}: </p>
+      <p className="validation__index">Question {question.index + 1}: </p>
       <p className={answerClasses}>
         {emptyAnswer ? 'Unanswered' : 'Answered'}{' '}
       </p>

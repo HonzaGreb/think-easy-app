@@ -8,14 +8,14 @@ import Questions from './components/Questions';
 function App() {
   const state = useSelector((state: RootState) => state);
 
-  const { position, answers } = state;
+  const { position, questions } = state;
   const { questionsShown, validationShown, resultShown } = position;
 
   return (
     <Card>
-      {validationShown && <Validation answers={answers} />}
+      {validationShown && <Validation questions={questions} />}
       {questionsShown && <Questions state={state} />}
-      {resultShown && <Result answers={answers} />}
+      {resultShown && <Result questions={questions} />}
     </Card>
   );
 }

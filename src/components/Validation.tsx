@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Answer } from '../model/Answer';
+import { Question } from '../model/Question';
 import {
   showResults,
   showQuestions,
@@ -8,10 +8,10 @@ import {
 } from '../features/positionSlice';
 import ValidationAnswer from './ValidationAnswer';
 
-const Validation: React.FC<{ answers: Answer[] }> = (props) => {
+const Validation: React.FC<{ questions: Question[] }> = (props) => {
   const [answersValid, setAnswersValid] = useState<boolean>(false);
 
-  const checkValidity = (a: Answer[]) => {
+  const checkValidity = (a: Question[]) => {
     let validity = true;
 
     a.forEach((item) => {
@@ -24,8 +24,8 @@ const Validation: React.FC<{ answers: Answer[] }> = (props) => {
   };
 
   useEffect(() => {
-    checkValidity(props.answers);
-  }, [props.answers]);
+    checkValidity(props.questions);
+  }, [props.questions]);
 
   const dispatch = useDispatch();
 
@@ -43,8 +43,8 @@ const Validation: React.FC<{ answers: Answer[] }> = (props) => {
       <div className="validation__text">
         <h3 className="validation__heading">Do you want to continue?</h3>
         <div className="validation__answers">
-          {props.answers.map((answer) => {
-            return <ValidationAnswer answer={answer} key={answer.index} />;
+          {props.questions.map((question) => {
+            return <ValidationAnswer question={question} key={question.index} />;
           })}
         </div>
       </div>

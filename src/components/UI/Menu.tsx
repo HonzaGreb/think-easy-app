@@ -1,13 +1,22 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 const Menu = () => {
-  <Fragment>
-    <button className="menu">
-      <span className="menu__one">?</span>
-      <span className="menu__two">×</span>
-    </button>
-    <div className="menu__bg"></div>
-  </Fragment>;
+  const [menuShown, setMenuShown] = useState<boolean>(false);
+
+  const menuToggleHandler = () => {
+    setMenuShown((prevState) => !prevState);
+  };
+
+  const menuStyles = menuShown ? 'menu shown' : 'menu';
+
+  return (
+    <Fragment>
+      <button className={menuStyles} onClick={menuToggleHandler}>
+        <span className="menu__bar"></span>
+      </button>
+      <div className="menu__bg"></div>
+    </Fragment>
+  );
 };
 
-export default Menu
+export default Menu;

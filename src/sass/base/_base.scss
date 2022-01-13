@@ -17,8 +17,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
-  background-image: $gradient;
+  background-image: $gradient-linear;
   color: $color-text;
+  overflow: hidden;
 }
 
 #root {

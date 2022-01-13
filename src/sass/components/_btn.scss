@@ -19,10 +19,10 @@
     @extend %btn;
     color: $color-white;
     border: none;
-    background-color: $color-primary;
+    background-color: $color-text;
 
     &:hover {
-      background-color: lighten($color-primary, 7%);
+      background-color: lighten($color-text, 7%);
       letter-spacing: 1px;
       transform: scale(1.02);
     }
@@ -35,12 +35,12 @@
 
   &--secondary {
     @extend %btn;
-    color: $color-primary;
+    color: $color-text;
     border: 2px solid currentColor;
     background-color: $color-white;
 
     &:hover {
-      background-color: lighten($color-primary, 68%);
+      background-color: lighten($color-text, 68%);
       letter-spacing: 1px;
       transform: scale(1.02);
     }

@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .card {
   position: relative;
@@ -9,6 +10,10 @@
   background-color: $color-white;
   border-radius: 4rem 0;
   animation: slideInLeftLarge 500ms ease;
+
+  @include respond(small) {
+    height: 55rem;
+  }
 
   &:hover {
     &::after {
@@ -29,6 +34,10 @@
     border: 2px solid $color-white;
     z-index: -1;
     transition: $transition;
+
+    @include respond(small) {
+      display: none;
+    }
   }
 }
 
@@ -52,12 +61,16 @@
   }
 
   &__input {
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem;
     font-family: inherit;
     border-radius: 0.5rem;
     border: 1px solid $color-grey-3;
     outline: none;
     transition: $transition;
+
+    @include respond(small) {
+      padding: 2rem 3rem;
+    }
 
     &:hover,
     &:active,

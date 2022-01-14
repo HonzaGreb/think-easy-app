@@ -1,17 +1,23 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 %btn {
   display: block;
   font-weight: 500;
   width: 100%;
   cursor: pointer;
-  padding: 1rem 2rem;
-  border-radius: 50rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
   background-color: transparent;
   color: $color-text;
   font-size: 1.6rem;
   text-transform: uppercase;
   transition: $transition;
+
+  @include respond(small) {
+    padding: 2rem 3rem;
+    font-size: 2rem
+  }
 }
 
 .btn {
@@ -53,11 +59,21 @@
 
   &--nav {
     cursor: pointer;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 10rem;
     border: 1px solid $color-text;
     transition: $transition;
+
+    @include respond(medium) {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    @include respond(small) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
 
     &:hover {
       background-color: $color-grey-2;
@@ -69,6 +85,12 @@
 
     &:not(:last-child) {
       margin-right: 0.5rem;
+
+
+
+      @include respond(medium) {
+        margin-right: 1.5rem;
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-@use '../abstracts/animations' as *;
+@use '../abstracts/mixins' as *;
 
 .heading {
   &--2 {
@@ -6,6 +6,10 @@
     font-size: 2rem;
     font-style: italic;
     font-weight: 800;
+
+    @include respond(small) {
+      font-size: 2.4rem;
+    }
   }
 }
 
@@ -22,5 +26,5 @@
 }
 
 .u-mb-auto {
-    margin-bottom: auto;
+  margin-bottom: auto;
 }

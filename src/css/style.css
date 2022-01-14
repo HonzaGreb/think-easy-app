@@ -31,6 +31,16 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 800px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -54,6 +64,11 @@ body {
   font-size: 2rem;
   font-style: italic;
   font-weight: 800;
+}
+@media (max-width: 600px) {
+  .heading--2 {
+    font-size: 2.4rem;
+  }
 }
 
 .u-mb-s {
@@ -82,6 +97,11 @@ body {
   border-radius: 4rem 0;
   animation: slideInLeftLarge 500ms ease;
 }
+@media (max-width: 600px) {
+  .card {
+    height: 55rem;
+  }
+}
 .card:hover::after {
   top: -2rem;
   right: 2rem;
@@ -98,6 +118,11 @@ body {
   border: 2px solid #fff;
   z-index: -1;
   transition: all 250ms ease;
+}
+@media (max-width: 600px) {
+  .card::after {
+    display: none;
+  }
 }
 
 .questions {
@@ -119,12 +144,17 @@ body {
   font-weight: 800;
 }
 .form__input {
-  padding: 1rem 2rem;
+  padding: 1.5rem 3rem;
   font-family: inherit;
   border-radius: 0.5rem;
   border: 1px solid #adadad;
   outline: none;
   transition: all 250ms ease;
+}
+@media (max-width: 600px) {
+  .form__input {
+    padding: 2rem 3rem;
+  }
 }
 .form__input:hover, .form__input:active, .form__input:focus {
   border-color: #a1a1a1;
@@ -160,7 +190,7 @@ body {
   border: none;
   background-color: #fff;
   transition: all 250ms ease;
-  z-index: 10;
+  z-index: 20;
 }
 .menu__bar {
   position: relative;
@@ -224,6 +254,7 @@ body {
 .menu__list {
   position: absolute;
   display: block;
+  max-width: 80vw;
   top: 50%;
   left: 40%;
   list-style: decimal;
@@ -289,6 +320,11 @@ body {
   font-size: 1.4rem;
   text-align: center;
 }
+@media (max-width: 600px) {
+  .validation__index, .validation__answer {
+    font-size: 1.8rem;
+  }
+}
 .validation__answers {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -334,6 +370,11 @@ body {
   text-align: center;
   quotes: "“" "”";
 }
+@media (max-width: 600px) {
+  .result__text {
+    font-size: 2.2rem;
+  }
+}
 .result__text::before, .result__text::after {
   display: inline-table;
   position: absolute;
@@ -357,13 +398,19 @@ body {
   font-weight: 500;
   width: 100%;
   cursor: pointer;
-  padding: 1rem 2rem;
-  border-radius: 50rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
   background-color: transparent;
   color: #383838;
   font-size: 1.6rem;
   text-transform: uppercase;
   transition: all 250ms ease;
+}
+@media (max-width: 600px) {
+  .btn--secondary, .btn--primary {
+    padding: 2rem 3rem;
+    font-size: 2rem;
+  }
 }
 
 .btn--primary {
@@ -396,11 +443,23 @@ body {
 }
 .btn--nav {
   cursor: pointer;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 10rem;
   border: 1px solid #383838;
   transition: all 250ms ease;
+}
+@media (max-width: 800px) {
+  .btn--nav {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .btn--nav {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .btn--nav:hover {
   background-color: #cecece;
@@ -410,6 +469,11 @@ body {
 }
 .btn--nav:not(:last-child) {
   margin-right: 0.5rem;
+}
+@media (max-width: 800px) {
+  .btn--nav:not(:last-child) {
+    margin-right: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

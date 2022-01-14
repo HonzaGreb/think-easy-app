@@ -14,7 +14,7 @@
   border: none;
   background-color: $color-white;
   transition: $transition;
-  z-index: 10;
+  z-index: 20;
 
   &__bar {
     position: relative;
@@ -91,6 +91,7 @@
   &__list {
     position: absolute;
     display: block;
+    max-width: 80vw;
     top: 50%;
     left: 40%;
     list-style: decimal;
@@ -148,7 +149,7 @@
       color: $color-text;
     }
   }
-  
+
   &__copy:hover &__link {
     color: $color-white;
   }

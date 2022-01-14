@@ -24,7 +24,6 @@ const Form: React.FC<{
 
     // ↓ Využije předešlou odpověď, není-li vložena nová
     const answerObject = { index, answer: inputValue || answer };
-    console.log(answerObject)
 
     if (inputValue) {
       dispatch(writeAnswer(answerObject));

@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from './app/store';
 import Card from './components/UI/Card';
+import Questions from './components/Questions';
 import Validation from './components/Validation';
 import Result from './components/Result';
 import Menu from './components/UI/Menu';
-import { useSelector } from 'react-redux';
-import { RootState } from './app/store';
-import Questions from './components/Questions';
 
 function App() {
   const state = useSelector((state: RootState) => state);

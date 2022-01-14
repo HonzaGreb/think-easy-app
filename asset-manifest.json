@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/think-easy-app/static/css/main.5820ec52.css",
-    "main.js": "/think-easy-app/static/js/main.225e0c4b.js",
+    "main.css": "/think-easy-app/static/css/main.bc65f484.css",
+    "main.js": "/think-easy-app/static/js/main.503e4c21.js",
     "index.html": "/think-easy-app/index.html",
-    "main.5820ec52.css.map": "/think-easy-app/static/css/main.5820ec52.css.map",
-    "main.225e0c4b.js.map": "/think-easy-app/static/js/main.225e0c4b.js.map"
+    "main.bc65f484.css.map": "/think-easy-app/static/css/main.bc65f484.css.map",
+    "main.503e4c21.js.map": "/think-easy-app/static/js/main.503e4c21.js.map"
   },
   "entrypoints": [
-    "static/css/main.5820ec52.css",
-    "static/js/main.225e0c4b.js"
+    "static/css/main.bc65f484.css",
+    "static/js/main.503e4c21.js"
   ]
 }

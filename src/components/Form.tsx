@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { writeAnswer } from '../features/questionsSlice';
 import { incrementPosition, showValidation } from '../features/positionSlice';
@@ -12,10 +12,17 @@ const Form: React.FC<{
   const [inputValue, setInputValue] = useState<string>('');
   const { question, answer } = props.question;
   const { total, index } = props;
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const dispatch = useDispatch();
 
   const lastPosition = index === total;
+
+  // Autofocus při každém component renderu
+
+  useEffect(() => {
+    inputRef.current!.focus()
+  }, [question])
 
   // ↓ Imperativní navigace a zápis odpovědí
 
@@ -57,6 +64,7 @@ const Form: React.FC<{
         value={inputValue}
         onChange={inputChangeHandler}
         placeholder={answer}
+        ref={inputRef}
       />
       <button className="btn--primary" type="submit">
         {lastPosition ? 'Check' : 'Next'}

@@ -28,7 +28,7 @@ const Result: React.FC<{ questions: Question[] }> = (props) => {
     <div className="result">
       <h2 className="heading--2">Result is:</h2>
       <span className="result__text">{extractedResult}</span>
-      <button className="btn--primary" onClick={resetHandler}>
+      <button className="btn--primary" onClick={resetHandler} autoFocus={true}>
         Reset
       </button>
     </div>

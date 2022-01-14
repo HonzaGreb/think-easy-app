@@ -41,13 +41,13 @@ const Validation: React.FC<{ questions: Question[] }> = (props) => {
   // ↓ Buttons
 
   const btnContinue = (
-    <button className="btn--primary" onClick={continueBtnHandler}>
+    <button className="btn--primary" onClick={continueBtnHandler} autoFocus={true}>
       Continue
     </button>
   );
 
   const btnRetry = (
-    <button className="btn--secondary" onClick={retryBtnHandler}>
+    <button className="btn--secondary" onClick={retryBtnHandler} autoFocus={true}>
       Retry
     </button>
   );

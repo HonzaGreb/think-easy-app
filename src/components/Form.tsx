@@ -16,7 +16,6 @@ const Form: React.FC<{
   const dispatch = useDispatch();
 
   const lastPosition = index === total;
-  console.log(index, total, question)
 
   // ↓ Imperativní navigace a zápis odpovědí
 
@@ -25,10 +24,12 @@ const Form: React.FC<{
 
     // ↓ Využije předešlou odpověď, není-li vložena nová
     const answerObject = { index, answer: inputValue || answer };
+    console.log(answerObject)
 
-    dispatch(writeAnswer(answerObject));
-    setInputValue('');
-    console.log('writing ', answerObject, '...');
+    if (inputValue) {
+      dispatch(writeAnswer(answerObject));
+      setInputValue('');
+    }
 
     if (lastPosition) {
       dispatch(showValidation());

@@ -7,6 +7,8 @@ const initialPosition = {
   resultShown: false,
 };
 
+// ↓ Logika pro imperativní navigaci
+
 const positionSlice = createSlice({
   name: 'index',
   initialState: initialPosition,

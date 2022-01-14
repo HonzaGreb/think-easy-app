@@ -3,6 +3,16 @@ import { Fragment, useState } from 'react';
 const Menu = () => {
   const [menuShown, setMenuShown] = useState<boolean>(false);
 
+  // ↓ Vysvětlivky renderovány dynamicky
+
+  const directions = [
+    'This software will allow you to build a sentence.',
+    'Try to answer the questions.',
+    'If you fail, you will be prompted to try again during the validation phase.',
+    'You may continue once all of the questions have been filled out.',
+    'Gaze upon the sentence you have just created and rejoice.',
+  ];
+
   const menuToggleHandler = () => {
     setMenuShown((prevState) => !prevState);
   };
@@ -15,25 +25,19 @@ const Menu = () => {
         <span className="menu__bar"></span>
       </button>
       <div className="menu__bg"></div>
-      <ol className="menu__list">
-        <li className="menu__item">
-          This software will allow you to build a sentence.
-        </li>
-        <li className="menu__item">Try to answer the questions.</li>
-        <li className="menu__item">
-          If you fail, you will be prompted to try again during the validation
-          phase.
-        </li>
-        <li className="menu__item">
-          You may continue once all of the questions have been filled out.
-        </li>
-        <li className="menu__item">
-          Gaze upon the sentence you have just created and rejoice.
-        </li>
+      <ul className="menu__list">
+        {directions.map((d, i) => {
+          return (
+            <li className="menu__item" key={i}>
+              {d}
+            </li>
+          );
+        })}
+
         <div className="menu__copy">
           &copy; Made by{' '}
           <a
-            href="https://github.com/HonzaGreb"
+            href="https://honzagreb.github.io/PortfolioWebsite/"
             target="_blank"
             rel="noopener noreferrer"
             className="menu__link"
@@ -50,7 +54,7 @@ const Menu = () => {
             ThinkEasy s.r.o.
           </a>
         </div>
-      </ol>
+      </ul>
     </Fragment>
   );
 };

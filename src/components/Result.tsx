@@ -16,6 +16,8 @@ const Result: React.FC<{ questions: Question[] }> = (props) => {
 
   const extractedResult = extractAndStringify(props.questions);
 
+    // ↓ Imperativní reset
+
   const resetHandler = () => {
     dispatch(resetAnswers());
     dispatch(showQuestions());

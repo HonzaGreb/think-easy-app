@@ -1,7 +1,9 @@
 import React from 'react';
 import { Question } from '../model/Question';
 
-const ValidationAnswer: React.FC<{ question: Question, index: number }> = (props) => {
+const ValidationAnswer: React.FC<{ question: Question; index: number }> = (
+  props
+) => {
   const { question, index } = props;
 
   const emptyAnswer = !question.answer;
@@ -9,6 +11,8 @@ const ValidationAnswer: React.FC<{ question: Question, index: number }> = (props
   const answerClasses = emptyAnswer
     ? 'validation__answer invalid'
     : 'validation__answer valid';
+
+  // {index + 1} jakožto náprava zero-based indexování
 
   return (
     <div>

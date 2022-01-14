@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { useDispatch } from 'react-redux';
 import { changePosition } from '../../features/positionSlice';
 
@@ -22,4 +22,4 @@ const NavButton: React.FC<{ index: number; currentIndex: number }> = (
   );
 };
 
-export default NavButton;
+export default memo(NavButton);

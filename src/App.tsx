@@ -16,8 +16,8 @@ function App() {
   return (
     <Fragment>
       <Card>
-        {validationShown && <Validation questions={questions} />}
         {questionsShown && <Questions state={state} />}
+        {validationShown && <Validation questions={questions} />}
         {resultShown && <Result questions={questions} />}
       </Card>
       <Menu />

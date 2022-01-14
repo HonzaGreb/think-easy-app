@@ -1,6 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Question } from '../model/Question';
 
+// ↓ Defaultní questions state uložen zde
+
 export const DEFAULT_QUESTIONS: Question[] = [
   { question: 'Who?', answer: '' },
   { question: 'What?', answer: '' },

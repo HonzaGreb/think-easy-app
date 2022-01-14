@@ -100,6 +100,7 @@ body {
 @media (max-width: 600px) {
   .card {
     height: 55rem;
+    padding: 4rem 2rem;
   }
 }
 .card:hover::after {
@@ -254,10 +255,9 @@ body {
 .menu__list {
   position: absolute;
   display: block;
-  max-width: 80vw;
   top: 50%;
   left: 40%;
-  list-style: decimal;
+  list-style: none;
   text-align: center;
   visibility: hidden;
   opacity: 0;
@@ -274,6 +274,7 @@ body {
 }
 .menu__item {
   font-size: 2rem;
+  width: 80vw;
   text-transform: uppercase;
   font-weight: 600;
   font-style: italic;
@@ -282,8 +283,18 @@ body {
 .menu__item:not(:last-child) {
   margin-bottom: 2rem;
 }
+@media (max-width: 600px) {
+  .menu__item:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
 .menu__item:last-of-type {
   margin-bottom: 16rem;
+}
+@media (max-width: 600px) {
+  .menu__item:last-of-type {
+    margin-bottom: 8rem;
+  }
 }
 .menu__item:hover {
   color: #383838;
@@ -298,10 +309,12 @@ body {
 }
 .menu__link {
   transition: inherit;
+  margin: 0 0.5rem;
 }
 .menu__link:link, .menu__link:visited {
   text-decoration: none;
   color: #383838;
+  border-bottom: 1px solid currentColor;
 }
 .menu__copy:hover .menu__link {
   color: #fff;

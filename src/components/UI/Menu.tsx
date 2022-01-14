@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import { Fragment, useState, memo } from 'react';
 import MenuList from './MenuList';
 
 const Menu = () => {
@@ -21,4 +21,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default memo(Menu);
